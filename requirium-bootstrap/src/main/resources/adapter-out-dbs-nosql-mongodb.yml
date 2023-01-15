@@ -1,0 +1,11 @@
+# mongoDB Config
+spring:
+  data:
+    mongodb:
+      #username: mongoadmin
+      #password: 123456789
+      #database: hexagonal
+      #host: localhost
+      #port: 8094
+      #authentication-database: admin
+      uri: mongodb://mongoadmin:123456789@localhost:8094/hexagonal?authSource=admin&authMechanism=SCRAM-SHA-1

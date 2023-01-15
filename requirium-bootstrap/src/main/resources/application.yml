@@ -1,0 +1,13 @@
+# Server Config
+server:
+  port: 8888
+  servlet:
+    context-path: /requirium-api
+
+spring:
+  config:
+    import:
+      - adapter-out-dbs-sql-oracle.yml
+      - adapter-out-dbs-nosql-mongodb.yml
+  webflux:
+    base-path: /requirium-api
