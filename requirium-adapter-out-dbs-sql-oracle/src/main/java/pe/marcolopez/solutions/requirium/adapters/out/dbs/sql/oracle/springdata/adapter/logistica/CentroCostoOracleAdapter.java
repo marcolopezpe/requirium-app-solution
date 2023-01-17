@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class CentroCostoAdapter implements CentroCostoListPort {
+public class CentroCostoOracleAdapter implements CentroCostoListPort {
 
     private final CentroCostoRepository centroCostoRepository;
     private final CentroCostoMapper centroCostoMapper;

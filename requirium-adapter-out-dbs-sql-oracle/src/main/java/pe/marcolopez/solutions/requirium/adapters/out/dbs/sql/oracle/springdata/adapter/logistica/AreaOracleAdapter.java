@@ -6,11 +6,10 @@ import org.springframework.transaction.annotation.Transactional;
 import pe.marcolopez.solutions.requirium.adapters.out.dbs.sql.oracle.springdata.entity.logistica.AreaOracleEntity;
 import pe.marcolopez.solutions.requirium.adapters.out.dbs.sql.oracle.springdata.mappers.logistica.AreaOracleMapper;
 import pe.marcolopez.solutions.requirium.adapters.out.dbs.sql.oracle.springdata.repository.AreaOracleRepository;
-import pe.marcolopez.solutions.requirium.application.ports.out.logistica.AreaByIdPort;
-import pe.marcolopez.solutions.requirium.application.ports.out.logistica.AreaCreatePort;
-import pe.marcolopez.solutions.requirium.application.ports.out.logistica.AreaListPort;
-import pe.marcolopez.solutions.requirium.application.ports.out.logistica.AreaUpdatePort;
+import pe.marcolopez.solutions.requirium.application.ports.out.logistica.*;
 import pe.marcolopez.solutions.requirium.domain.logistica.Area;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +17,7 @@ import java.util.Optional;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class AreaOracleAdapter implements AreaListPort, AreaByIdPort, AreaCreatePort, AreaUpdatePort {
+public class AreaOracleAdapter implements AreaListFluxPort, AreaCreateFluxPort, AreaListPort, AreaByIdPort, AreaCreatePort, AreaUpdatePort {
 
     private final AreaOracleRepository areaOracleRepository;
     private final AreaOracleMapper areaOracleMapper;
@@ -55,6 +54,16 @@ public class AreaOracleAdapter implements AreaListPort, AreaByIdPort, AreaCreate
                     areaOracleRepository.save(entityFetched)
             );
         }
+        return null;
+    }
+
+    @Override
+    public Mono<Area> createFlux(Area area) {
+        return null;
+    }
+
+    @Override
+    public Flux<Area> findFluxAll() {
         return null;
     }
 }

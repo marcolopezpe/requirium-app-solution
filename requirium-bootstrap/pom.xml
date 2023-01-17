@@ -28,6 +28,7 @@
             <artifactId>requirium-application</artifactId>
             <version>${project.version}</version>
         </dependency>
+
         <dependency>
             <groupId>pe.marcolopez.solutions</groupId>
             <artifactId>requirium-adapter-out-dbs-sql-oracle</artifactId>
@@ -35,15 +36,16 @@
         </dependency>
         <dependency>
             <groupId>pe.marcolopez.solutions</groupId>
+            <artifactId>requirium-adapter-in-web-rest</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>pe.marcolopez.solutions</groupId>
             <artifactId>requirium-adapter-out-dbs-nosql-mongodb</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>pe.marcolopez.solutions</groupId>
-            <artifactId>requirium-adapter-in-web-rest</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <!--<dependency>
             <groupId>pe.marcolopez.solutions</groupId>
             <artifactId>requirium-adapter-in-web-reactive</artifactId>
             <version>${project.version}</version>
